@@ -1,0 +1,2 @@
+ALTER TABLE `users` ADD COLUMN `tunnus` VARCHAR(25) NULL DEFAULT '';
+CREATE TABLE `poliisitunnukset` (`identifier` varchar(255) COLLATE utf8mb4_bin NOT NULL, `tunnus` varchar(128) COLLATE utf8mb4_bin NOT NULL);

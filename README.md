@@ -1,7 +1,7 @@
 # TapsuTunnus--FiveM-
 
 Video:
-https://streamable.com/7z2ce1
+https://streamable.com/a6dqx9
 
 Komennot:
 /luotunnus

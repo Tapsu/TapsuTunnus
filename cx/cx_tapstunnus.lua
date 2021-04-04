@@ -2,7 +2,7 @@ ESX = nil
 Citizen.CreateThread(function()
 	while ESX == nil do
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
+		Citizen.Wait(100)
 	end
 end)
 
@@ -63,6 +63,6 @@ Citizen.CreateThread(function()
                 SendNUIMessage({ type = "click" })
             end
         end
-        Citizen.Wait(0)
+        Citizen.Wait(5)
     end
 end)

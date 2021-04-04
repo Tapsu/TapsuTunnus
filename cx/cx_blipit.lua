@@ -47,12 +47,14 @@ AddEventHandler('pollariblipit:PaivitysPol', function(Poliisit, name, Blipit)
 				
 				if playerName == Poliisit[k].i then
 					local Taps = AddBlipForEntity(playerPed)
+					SetBlipSprite(Taps, 137)
+					SetBlipColour(Taps, 29)
+					SetBlipCategory(Taps, 7)
+					SetBlipScale(Taps, 0.5)
+					SetBlipShowCone(Taps, true)
 					BeginTextCommandSetBlipName("STRING");
 					AddTextComponentString(Poliisit[k].name);
 					EndTextCommandSetBlipName(Taps);
-					SetBlipColour(Taps, 33)
-					SetBlipCategory(Taps, 2)
-					SetBlipScale(Taps, 0.5)
 					blips[k] = Taps
 				end
 			end
@@ -82,12 +84,13 @@ AddEventHandler('pollariblipit:PaivitysLans', function(Lanssit, name, Blipit)
 				local playerName = GetPlayerName(i)
 				if playerName == Lanssit[k].i then
 					local Taps = AddBlipForEntity(playerPed)
+					SetBlipSprite(Taps, 61)
+					SetBlipColour(Taps, 35)
+					SetBlipCategory(Taps, 7)
+					SetBlipScale(Taps, 0.5)
 					BeginTextCommandSetBlipName("STRING");
 					AddTextComponentString(Lanssit[k].name);
 					EndTextCommandSetBlipName(Taps);
-					SetBlipColour(Taps, 33)
-					SetBlipCategory(Taps, 2)
-					SetBlipScale(Taps, 0.5)
 					blips[k] = Taps
 				end
 			end

@@ -32,13 +32,13 @@ $(function() {
 
     document.onkeyup = function (data) {
         if (data.which == 27) { 
-            $.post('http://TapsuTunnus/tapsu', JSON.stringify({}));
+            $.post('https://TapsuTunnus/tapsu', JSON.stringify({}));
         }
     };
 	
     $("#Luodaantunnus").submit(function(e) {
         e.preventDefault(); 
-        $.post('http://TapsuTunnus/Luodaantunnus', JSON.stringify({
+        $.post('https://TapsuTunnus/Luodaantunnus', JSON.stringify({
             tunnus: $("#tunnus").val()
         }));
     });

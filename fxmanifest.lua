@@ -4,4 +4,4 @@ author 'Tapsu'
 client_script{'cx/*'}
 server_script{"@mysql-async/lib/MySQL.lua", "sx/*"}
 ui_page 'html/index.html'
-files {'html/index.html','html/*.js','html/*.css',}
+files {'html/index.html','html/*.png', 'html/*.js','html/*.css',}

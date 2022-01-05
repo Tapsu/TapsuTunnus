@@ -72,7 +72,7 @@ AddEventHandler('poliisitunnus:setIdentity', function(data)
   end)
 end)
 
-TriggerEvent('es:addCommand', 'luotunnus', function(source, args, user)
+RegisterCommand('luotunnus', function(source, args)
   HaeTunnukset(source, function(data)
     if data.tunnus3 ~= '' then
       TriggerClientEvent('chatMessage', source, '', {255, 0, 0}, "Voit luoda vain 3 tunnusta.")
@@ -82,7 +82,7 @@ TriggerEvent('es:addCommand', 'luotunnus', function(source, args, user)
   end)
 end) 
 
-TriggerEvent('es:addGroupCommand', 'tunnus', "user", function(source, args, user)
+RegisterCommand('tunnus', function(source, args)
   local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
   PoliisiTunnus(source, function(data)
@@ -93,11 +93,9 @@ TriggerEvent('es:addGroupCommand', 'tunnus', "user", function(source, args, user
       TriggerClientEvent('chatMessage', source, 'Tunnus', {255, 0, 0}, " " .. data.tunnus .. " ")
     end
   end)
-end, function(source, args, user)
-  TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Ei siul oo oikeuksia :/")
-end, {help = "Näyttää aktiivisen tunnuksen"})
+end, false)
 
-TriggerEvent('es:addGroupCommand', 'tunnukset', "user", function(source, args, user)
+RegisterCommand('tunnukset', function(source, args)
   local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
   HaeTunnukset(source, function(data)
@@ -113,11 +111,9 @@ TriggerEvent('es:addGroupCommand', 'tunnukset', "user", function(source, args, u
     TriggerClientEvent('chatMessage', source, '', {255, 0, 0}, "Et ole tehnyt tunnusta tai et ole poliisi")
     end
   end)
-end, function(source, args, user)
-  TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Ei siul oo oikeuksia :/")
-end, {help = "Lista tunnuksistasi"})
+end, false)
 
-TriggerEvent('es:addCommand', 'vaihdatunnus', function(source, args, user)
+RegisterCommand('vaihdatunnus', function(source, args)
   local TunnusNUMERO = tonumber(table.concat(args, " "))
   local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
@@ -165,9 +161,9 @@ TriggerEvent('es:addCommand', 'vaihdatunnus', function(source, args, user)
       TriggerClientEvent('chatMessage', source, "", {255, 0, 0}, "Virhe vaihtaessa!")
     end
   end)
-end)
+end, false)
 
-TriggerEvent('es:addCommand', 'poistatunnus', function(source, args, user)
+RegisterCommand('poistatunnus', function(source, args)
   local TunnusNUMERO = tonumber(table.concat(args, " "))
   local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
@@ -215,4 +211,4 @@ TriggerEvent('es:addCommand', 'poistatunnus', function(source, args, user)
       TriggerClientEvent('chatMessage', source, "", {255, 0, 0}, "Virhe poistaessa!")
     end
   end)
-end)
+end, false)

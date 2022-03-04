@@ -10,44 +10,44 @@ body {
 }
 
 .t_boxi {
-    position: relative;
-    left: 46%;
-    top: 50%;
-    width: 1000px;
-    height: 530px; 
-    background: url("../html/iiippone.png");
+  position: relative;
+  left: 46%;
+  top: 45%;
+  width: 1000px;
+  height: 530px;
+  background: url("../html/iiippone.png");
 }
 
-input[type=text] {
-    width: 100%;
-	text-align: center;
-    color: rgba(238, 223, 13, 0.863);
-    font-size: 30px;
-    background: transparent;
-    outline: none;
-    border: none;
-    margin-top: 200px;
+input[type="text"] {
+  width: 100%;
+  text-align: center;
+  color: rgba(238, 223, 13, 0.863);
+  font-size: 30px;
+  background: transparent;
+  outline: none;
+  border: none;
+  margin-top: 269px;
 }
 
 button {
-    display: block;
-    margin-top: 80px;
-    padding: 10px;
-    border-radius: 15px;
-    background-color: rgba(238, 223, 13, 0.863);
-    border: 0;
-    color: #fff;
-    font-size: 20px;
-    height: 50px;
-    width: 25%;
+  display: block;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 35px;
+  background-color: rgba(238, 223, 13, 0.863);
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  height: 50px;
+  width: 25%;
 }
 
-button:hover{
-    background-color: rgba(243, 228, 13, 0.974);
+button:hover {
+  background-color: rgba(243, 228, 13, 0.974);
 }
 
 #hiiri {
-    position: absolute;
-    z-index: 999999;
-    display: none;
+  position: absolute;
+  z-index: 999999;
+  display: none;
 }
